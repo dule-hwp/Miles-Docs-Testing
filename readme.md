@@ -1,5 +1,16 @@
 # Miles
 
+In this document we are showing main functions of the Miles applications.
+mMonitor App is used for monitoring the user, other apps are used to
+present the results to user. We have three different app to present the data gathered:
+* mConnect - Social App
+* mTrack - Cognitive
+* mSmiles - Affect
+
+**No code will be pushed to this repo. This repo is intended only for the purpose
+of showing the progress of the Miles applications and should reflect
+the current state of the apps.**
+
 ## mMonitor Application
 
 #### Copy database to sd card:
@@ -40,7 +51,7 @@ Note:
 
 #### Progress tab
 
-### No data
+##### No data
 
 Note: Try to find some library which does this graph drawing nicer. Current
 implementation simply draw lines and rectangles and fill them with simple colors.
@@ -56,7 +67,7 @@ It looks kinda too simple. There must be some lib for this. Find it!!
 
     ![image](mConnect-Social/_tabs/all.gif)
 
-### With Data generated
+##### With Data generated
 
 **Currently verifying if the data displayed is valid/useful**
 
@@ -64,7 +75,29 @@ It looks kinda too simple. There must be some lib for this. Find it!!
 
 <img src="mConnect-Social/with_data_all.png" width="300" height="534">
 
-1.
+1. With Data displayed
+
+    * Showing content of the tabs with data generated
+    * Note the functionality on week page when pressing left, right arrows
+    On first tap/swipe (data has changed, probably bug)
+    * Functionality when using arrows:
+        * Have no idea whats going on, but i see graphs flying around
+        * Maybe some date change indicator should be added?
+        * Also why only wednesday and tuesday are shown (04/04 is Wed)??
+        Is it only today and yesterday data shown
+
+    ![image](mConnect-Social/_tabs/data-day_week_all.gif)
+
+1. With Data displayed change date Functionality
+
+with no data this functionality appears to do nothing. When there is some data
+something actually happens on date change:
+
+* Pay attention to data changes and date indicator right above graph. Is it bug or a feature?
+* Date is changed only on certain days. Investigate why.. Does it change only for those days
+that have data or something else is going on.
+
+    ![image](mConnect-Social/_tabs/data-day-changeDay.gif)
 
 #### Messages tab
 
@@ -83,7 +116,56 @@ It looks kinda too simple. There must be some lib for this. Find it!!
 
 ## mTrack Application
 
+### Progress tab
 
+1. Week page
+    * Changing week functionality works weird (i have to scrooll to see it)
+    * Maybe add auto scroll or redesign page
+2. All Page
+    * Black color actual, blue color goals
+    * All page - data makes sense (maybe redesign)
+
+![image](mTrack-Cognitive/_progressTab.gif)
+
+### Tips tab
+
+* No swiping to see animations
+* Animating views on every item click
+* Arrows click, buttons click, list items click all start some animation
+    * dont break them while refactoring
+    * use this as regression test (maybe make ui tet with espresso for this,
+    set the stable ids first)
+
+![image](mTrack-Cognitive/_tipsTab.gif)
+
+### FAQ tab
+
+Same as for mConnect
+
+### Setting Goals
+
+#### Later Chosen
+
+What happens when later is chosen:
+
+* You get straigh into the app without goals set
+* Next when you enter the app you get asced for goals again
+* Its a bug that you cant set goals through menu even though you chosen "later" before.
+* You should be allowed to enter goals in this case.
+* If You set goals and then try to reset them as soon as you get in the app, thats not allowed,
+ you should wait for app to prompt you for goals (next week).
+
+![image](mTrack-Cognitive/_goals_later_chosen.gif)
+
+#### Proceed with goals setting
+
+This step should be shown to user once a week to reset goals.
+
+![image](mTrack-Cognitive/_goals_set.gif)
+
+### Menu Options
+
+![image](mTrack-Cognitive/_menu_options.gif)
 
 ## mSmiles Application
 
