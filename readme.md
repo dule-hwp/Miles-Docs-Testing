@@ -40,7 +40,7 @@ Note:
 1. Change day
 
     ![image](mConnect-Social/_menu/menu_change_day.gif)
-1. Reply to messages
+1. Create discussion
 
     ![image](mConnect-Social/_menu/menu_create_discussion.gif)
 1. Note the changes in menu options as tabs are being switched
@@ -88,9 +88,9 @@ It looks kinda too simple. There must be some lib for this. Find it!!
 
     ![image](mConnect-Social/_tabs/data-day_week_all.gif)
 
-1. With Data displayed change date Functionality
+1. With Data displayed (change date functionality)
 
-with no data this functionality appears to do nothing. When there is some data
+When no data generated, this functionality appears to do nothing. When there is some data
 something actually happens on date change:
 
 * Pay attention to data changes and date indicator right above graph. Is it bug or a feature?
@@ -103,9 +103,9 @@ that have data or something else is going on.
 
 1. Message reply functionality (tap on message)
 1. Expanding discussion functionality (tap on discussion)
-1. Difference between message and discussion is that message have no arrow on left side
+1. Difference between message and discussion is that message has no arrow on left side
     * Is this enough?
-    * Do we wanna change this?
+    * Do we wanna change this to make them more distinguishable?
 
     ![image](mConnect-Social/_tabs/message_reply.gif)
 
